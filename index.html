@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Beauty in House — Korea's trusted K-Beauty wholesale distributor. Premium skincare and cosmetics brands for global resellers.">
+  <meta name="keywords" content="K-Beauty distributor, Korean cosmetics wholesale, COSRX, Laneige, MISSHA, The Face Shop, Etude, beauty wholesale Korea">
+  <meta property="og:title" content="Beauty in House | K-Beauty Wholesale Distributor">
+  <meta property="og:description" content="Your trusted partner for premium Korean beauty brands. Wholesale distribution to global resellers.">
+  <meta property="og:image" content="https://www.beautyinhouse.co.kr/web/upload/category/editor/2019/12/13/cad87a195fcfed9d907563aa02113618.jpg">
+  <title>Beauty in House | K-Beauty Wholesale Distributor</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /* Inline extras */
+    .toast {
+      position: fixed;
+      bottom: 40px; left: 50%;
+      transform: translateX(-50%) translateY(20px);
+      background: #1C1C1C;
+      color: #fff;
+      padding: 14px 28px;
+      border-radius: 100px;
+      font-size: 14px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      z-index: 9999;
+      opacity: 0;
+      transition: opacity 0.3s, transform 0.3s;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+      white-space: nowrap;
+      letter-spacing: 0.3px;
+    }
+    .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+    .toast span { color: #4CAF50; margin-right: 6px; }
+    .spinner {
+      display: inline-block; width: 14px; height: 14px;
+      border: 2px solid rgba(255,255,255,0.3);
+      border-top-color: #fff; border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .nav-links a.active-link { color: #E8758A !important; }
+    .nav-links a.active-link::after { width: 100% !important; }
+
+    /* Verified badge */
+    .verified-tag {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(232,117,138,0.15); border: 1px solid rgba(232,117,138,0.3);
+      padding: 5px 14px; border-radius: 100px;
+      font-size: 11px; font-weight: 700; letter-spacing: 1.5px;
+      text-transform: uppercase; color: #E8758A; margin-bottom: 12px;
+    }
+
+    /* Partner logos row */
+    .partner-row {
+      border-top: 1px solid #eee;
+      padding: 48px 0;
+      background: #fff;
+    }
+    .partner-label {
+      text-align: center;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #9E9E9E;
+      margin-bottom: 36px;
+    }
+    .partner-logos {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 48px;
+    }
+    .partner-logos img {
+      height: 30px; width: auto;
+      filter: grayscale(100%) opacity(0.4);
+      transition: filter 0.3s;
+      object-fit: contain;
+    }
+    .partner-logos img:hover { filter: grayscale(0%) opacity(1); }
+  </style>
+</head>
+<body>
+
+<!-- ============================================================
+     HEADER
+     ============================================================ -->
+<header id="header" class="transparent">
+  <nav class="nav-inner">
+
+    <!-- Logo -->
+    <a href="#" class="nav-logo">
+      <img src="https://www.beautyinhouse.co.kr/web/upload/category/editor/2020/02/18/9f4010ba7065a219219232e8225a371f.png"
+           alt="Beauty in House Logo"
+           onerror="this.style.display='none'">
+      <div class="nav-logo-text">
+        <span>BEAUTY IN HOUSE</span>
+        <span>K-Beauty Distributor</span>
+      </div>
+    </a>
+
+    <!-- Desktop Nav -->
+    <ul class="nav-links">
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#brands">Brands</a></li>
+      <li><a href="#why">Why Us</a></li>
+      <li><a href="#process">How to Order</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <!-- Right side -->
+    <div class="nav-cta">
+      <a href="#contact" class="btn btn-primary">Inquire Now</a>
+    </div>
+
+    <!-- Mobile toggle -->
+    <button class="menu-toggle" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<!-- Mobile Nav -->
+<div class="mobile-overlay"></div>
+<nav class="mobile-nav">
+  <button class="mobile-nav-close">✕</button>
+  <ul class="mobile-nav-links">
+    <li><a href="#about">About Us <i class="fas fa-chevron-right" style="font-size:11px"></i></a></li>
+    <li><a href="#brands">Brands <i class="fas fa-chevron-right" style="font-size:11px"></i></a></li>
+    <li><a href="#why">Why Us <i class="fas fa-chevron-right" style="font-size:11px"></i></a></li>
+    <li><a href="#process">How to Order <i class="fas fa-chevron-right" style="font-size:11px"></i></a></li>
+    <li><a href="#contact">Contact <i class="fas fa-chevron-right" style="font-size:11px"></i></a></li>
+  </ul>
+  <div style="margin-top:40px;">
+    <a href="#contact" class="btn btn-primary" style="width:100%;justify-content:center">Inquire Now</a>
+  </div>
+</nav>
+
+
+<!-- ============================================================
+     HERO SECTION
+     ============================================================ -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span>Official K-Beauty Wholesale Distributor · Korea</span>
+    </div>
+
+    <h1 class="hero-title">
+      Your Trusted<br>
+      <em>K-Beauty Partner</em>
+    </h1>
+
+    <p class="hero-desc">
+      We connect global resellers with Korea's most sought-after cosmetic brands.
+      Authentic products. Competitive pricing. Reliable supply chain — all in one place.
+    </p>
+
+    <div class="hero-actions">
+      <a href="#brands" class="btn btn-primary">
+        <i class="fas fa-th-large"></i> Explore Brands
+      </a>
+      <a href="#contact" class="btn btn-outline">
+        Get Wholesale Price <i class="fas fa-arrow-right"></i>
+      </a>
+    </div>
+
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="hero-stat-num">
+          <span data-count="10" data-suffix="+">0+</span>
+        </div>
+        <div class="hero-stat-label">Premium Brands</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">
+          <span data-count="50" data-suffix="+">0+</span>
+        </div>
+        <div class="hero-stat-label">Countries Shipped</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">
+          <span data-count="500" data-suffix="+">0+</span>
+        </div>
+        <div class="hero-stat-label">Global Resellers</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">
+          <span data-count="15" data-suffix="Y">0Y</span>
+        </div>
+        <div class="hero-stat-label">Experience</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     TICKER
+     ============================================================ -->
+<div class="ticker-wrap">
+  <div class="ticker-track">
+    <!-- Duplicated for seamless loop -->
+    <div class="ticker-item">COSRX <span class="ticker-dot"></span></div>
+    <div class="ticker-item">LANEIGE <span class="ticker-dot"></span></div>
+    <div class="ticker-item">MISSHA <span class="ticker-dot"></span></div>
+    <div class="ticker-item">ETUDE <span class="ticker-dot"></span></div>
+    <div class="ticker-item">THE FACE SHOP <span class="ticker-dot"></span></div>
+    <div class="ticker-item">MANYO FACTORY <span class="ticker-dot"></span></div>
+    <div class="ticker-item">HARU HARU WONDER <span class="ticker-dot"></span></div>
+    <div class="ticker-item">IM FROM <span class="ticker-dot"></span></div>
+    <div class="ticker-item">AUTHENTIC K-BEAUTY <span class="ticker-dot"></span></div>
+    <div class="ticker-item">WHOLESALE DISTRIBUTION <span class="ticker-dot"></span></div>
+    <div class="ticker-item">GLOBAL RESELLERS WELCOME <span class="ticker-dot"></span></div>
+    <!-- Duplicate -->
+    <div class="ticker-item">COSRX <span class="ticker-dot"></span></div>
+    <div class="ticker-item">LANEIGE <span class="ticker-dot"></span></div>
+    <div class="ticker-item">MISSHA <span class="ticker-dot"></span></div>
+    <div class="ticker-item">ETUDE <span class="ticker-dot"></span></div>
+    <div class="ticker-item">THE FACE SHOP <span class="ticker-dot"></span></div>
+    <div class="ticker-item">MANYO FACTORY <span class="ticker-dot"></span></div>
+    <div class="ticker-item">HARU HARU WONDER <span class="ticker-dot"></span></div>
+    <div class="ticker-item">IM FROM <span class="ticker-dot"></span></div>
+    <div class="ticker-item">AUTHENTIC K-BEAUTY <span class="ticker-dot"></span></div>
+    <div class="ticker-item">WHOLESALE DISTRIBUTION <span class="ticker-dot"></span></div>
+    <div class="ticker-item">GLOBAL RESELLERS WELCOME <span class="ticker-dot"></span></div>
+  </div>
+</div>
+
+
+<!-- Partner logos quick row -->
+<div class="partner-row">
+  <div class="container">
+    <p class="partner-label">Official Brands We Carry</p>
+    <div class="partner-logos">
+      <img src="Cosmetic Brand logo/COSRX 2.png"          alt="COSRX">
+      <img src="Cosmetic Brand logo/laneige.svg"        alt="Laneige">
+      <img src="Cosmetic Brand logo/MISSHA.png"         alt="MISSHA">
+      <img src="Cosmetic Brand logo/etude.png"          alt="Etude">
+      <img src="Cosmetic Brand logo/thefaceshop.png"    alt="The Face Shop">
+      <img src="Cosmetic Brand logo/manyo.jpg"          alt="Manyo Factory">
+      <img src="Cosmetic Brand logo/haruharu wonder.png" alt="Haru Haru Wonder">
+      <img src="Cosmetic Brand logo/imfrom.jpg"         alt="Im From">
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     ABOUT SECTION
+     ============================================================ -->
+<section id="about" class="section">
+  <div class="container">
+    <div class="about-grid">
+
+      <!-- Image side -->
+      <div class="about-image-wrap reveal">
+        <img class="about-image-main"
+             src="images/cosrx mucin essence.jpg"
+             alt="Beauty in House showroom"
+             onerror="this.src='https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?w=800&q=80'; this.onerror=null;">
+        <div class="about-image-badge">
+          <div class="num">15+</div>
+          <div class="txt">Years of<br>Excellence</div>
+        </div>
+      </div>
+
+      <!-- Text side -->
+      <div class="about-text">
+        <div class="reveal">
+          <p class="label">About Beauty in House</p>
+          <h2 class="section-title">Korea's Premier<br>K-Beauty Distributor</h2>
+          <p class="section-subtitle" style="margin-top:20px">
+            Beauty in House is a leading wholesale distributor of premium Korean cosmetic brands,
+            serving hundreds of resellers across Asia, Europe, the Americas, and the Middle East.
+            We are an official, authorized distributor — guaranteeing 100% authentic products
+            with full traceability from brand to buyer.
+          </p>
+        </div>
+
+        <div class="about-features reveal" style="transition-delay:0.15s">
+          <div class="about-feature">
+            <div class="about-feature-icon">🏆</div>
+            <div class="about-feature-text">
+              <strong>Official Authorization</strong>
+              <p>Direct brand agreements with all major K-Beauty labels</p>
+            </div>
+          </div>
+          <div class="about-feature">
+            <div class="about-feature-icon">🌍</div>
+            <div class="about-feature-text">
+              <strong>Global Reach</strong>
+              <p>Export experience to 50+ countries worldwide</p>
+            </div>
+          </div>
+          <div class="about-feature">
+            <div class="about-feature-icon">📦</div>
+            <div class="about-feature-text">
+              <strong>Reliable Logistics</strong>
+              <p>Fast, secure shipping with full tracking & insurance</p>
+            </div>
+          </div>
+          <div class="about-feature">
+            <div class="about-feature-icon">💼</div>
+            <div class="about-feature-text">
+              <strong>Dedicated Support</strong>
+              <p>Dedicated export account manager for each partner</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal" style="margin-top:40px; transition-delay:0.3s">
+          <a href="#contact" class="btn btn-dark">
+            Become a Reseller Partner <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     BRANDS SECTION
+     ============================================================ -->
+<section id="brands" class="section section-alt">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="label">Brand Portfolio</p>
+      <h2 class="section-title">Premium K-Beauty Brands</h2>
+      <p class="section-subtitle">
+        We carry an expanding portfolio of Korea's most recognized and trusted beauty brands —
+        each one verified, authorized, and ready to ship to your market.
+      </p>
+    </div>
+
+    <div class="brands-grid">
+
+      <!-- COSRX -->
+      <div class="brand-card reveal reveal-delay-1">
+        <div class="brand-logo-wrap">
+          <img src="Cosmetic Brand logo/COSRX 2.png" alt="COSRX"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+          <span style="display:none; font-size:1.6rem; font-weight:900; letter-spacing:1px;">COSRX</span>
+        </div>
+        <div class="brand-name">COSRX</div>
+        <div class="brand-category">Skincare · Acne &amp; Moisture</div>
+      </div>
+
+      <!-- LANEIGE -->
+      <div class="brand-card reveal reveal-delay-2">
+        <div class="brand-logo-wrap">
+          <img src="Cosmetic Brand logo/laneige.svg" alt="Laneige"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+          <span style="display:none; font-size:1.3rem; font-weight:900; letter-spacing:2px;">LANEIGE</span>
+        </div>
+        <div class="brand-name">LANEIGE</div>
+        <div class="brand-category">Skincare · Hydration &amp; Tone</div>
+      </div>
+
+      <!-- MISSHA -->
+      <div class="brand-card reveal reveal-delay-3">
+        <div class="brand-logo-wrap">
+          <img src="Cosmetic Brand logo/MISSHA.png" alt="MISSHA"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+          <span style="display:none; font-size:1.4rem; font-weight:900; letter-spacing:1px;">MISSHA</span>
+        </div>
+        <div class="brand-name">MISSHA</div>
+        <div class="brand-category">Skincare · Anti-aging &amp; Serum</div>
+      </div>
+
+      <!-- ETUDE -->
+      <div class="brand-card reveal reveal-delay-4">
+        <div class="brand-logo-wrap">
+          <img src="Cosmetic Brand logo/etude.png" alt="Etude"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+          <span style="display:none; font-size:1.4rem; font-weight:900; letter-spacing:1px;">ETUDE</span>
+        </div>
+        <div class="brand-name">ETUDE</div>
+        <div class="brand-category">Makeup · Color &amp; Trendy</div>
+      </div>
+
+      <!-- THE FACE SHOP -->
+      <div class="brand-card reveal reveal-delay-1">
+        <div class="brand-logo-wrap">
+          <img src="Cosmetic Brand logo/thefaceshop.png" alt="The Face Shop"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+          <span style="display:none; font-size:1.1rem; font-weight:900; letter-spacing:1px;">THE FACE SHOP</span>
+        </div>
+        <div class="brand-name">THE FACE SHOP</div>
+        <div class="brand-category">Skincare &amp; Makeup · Natural</div>
+      </div>
+
+      <!-- MANYO FACTORY -->
+      <div class="brand-card reveal reveal-delay-2">
+        <div class="brand-logo-wrap">
+          <img src="Cosmetic Brand logo/manyo2.jpg" alt="Manyo Factory"
+               style="border-radius:8px"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+          <span style="display:none; font-size:1.2rem; font-weight:900; letter-spacing:1px;">MANYO</span>
+        </div>
+        <div class="brand-name">MANYO FACTORY</div>
+        <div class="brand-category">Skincare · Clean &amp; Fermented</div>
+      </div>
+
+      <!-- HARU HARU WONDER -->
+      <div class="brand-card reveal reveal-delay-3">
+        <div class="brand-logo-wrap">
+          <img src="Cosmetic Brand logo/haruharu wonder.png" alt="Haru Haru Wonder"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+          <span style="display:none; font-size:1.1rem; font-weight:900; letter-spacing:1px;">HARU HARU</span>
+        </div>
+        <div class="brand-name">HARU HARU WONDER</div>
+        <div class="brand-category">Skincare · Vegan &amp; Botanical</div>
+      </div>
+
+      <!-- IM FROM -->
+      <div class="brand-card reveal reveal-delay-4">
+        <div class="brand-logo-wrap">
+          <img src="Cosmetic Brand logo/imfrom.jpg" alt="Im From"
+               style="border-radius:8px"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+          <span style="display:none; font-size:1.4rem; font-weight:900; letter-spacing:1px;">IM FROM</span>
+        </div>
+        <div class="brand-name">IM FROM</div>
+        <div class="brand-category">Skincare · Pure Ingredients</div>
+      </div>
+
+    </div>
+
+    <div class="reveal" style="text-align:center; margin-top:56px; transition-delay:0.3s">
+      <p style="font-size:14px; color:#9E9E9E; margin-bottom:20px">
+        More brands available upon request. Contact us for our full catalog.
+      </p>
+      <a href="#contact" class="btn btn-primary">Request Full Catalog</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     WHY CHOOSE US
+     ============================================================ -->
+<section id="why" class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="label">Why Partner With Us</p>
+      <h2 class="section-title">The Beauty in House<br>Advantage</h2>
+      <p class="section-subtitle">
+        We are more than just a supplier. We are a long-term business partner
+        committed to your growth in the K-Beauty market.
+      </p>
+    </div>
+
+    <div class="why-grid">
+
+      <div class="why-card reveal reveal-delay-1">
+        <div class="why-num">01</div>
+        <div class="why-icon">✅</div>
+        <h3>100% Authentic Products</h3>
+        <p>Every product is sourced directly from brands or authorized manufacturers. We provide Certificate of Authenticity and full traceability documentation for customs clearance.</p>
+      </div>
+
+      <div class="why-card reveal reveal-delay-2">
+        <div class="why-num">02</div>
+        <div class="why-icon">💰</div>
+        <h3>Competitive Wholesale Pricing</h3>
+        <p>Our direct brand relationships and high-volume purchasing give us the leverage to offer highly competitive wholesale prices that maximize your margins.</p>
+      </div>
+
+      <div class="why-card reveal reveal-delay-3">
+        <div class="why-num">03</div>
+        <div class="why-icon">🚀</div>
+        <h3>Fast Global Shipping</h3>
+        <p>Warehoused in Korea with daily export dispatches. We ship to 50+ countries via DHL, FedEx, EMS, and sea freight. Real-time tracking on every order.</p>
+      </div>
+
+      <div class="why-card reveal reveal-delay-1">
+        <div class="why-num">04</div>
+        <div class="why-icon">📋</div>
+        <h3>Export Documentation Support</h3>
+        <p>We handle all necessary export paperwork — commercial invoices, packing lists, Certificate of Origin, CPNP, and country-specific compliance documents.</p>
+      </div>
+
+      <div class="why-card reveal reveal-delay-2">
+        <div class="why-num">05</div>
+        <div class="why-icon">🤝</div>
+        <h3>Dedicated Account Manager</h3>
+        <p>Every reseller partner gets a dedicated point-of-contact fluent in English, Korean, and Chinese. Quick response, personal service, and market intelligence updates.</p>
+      </div>
+
+      <div class="why-card reveal reveal-delay-3">
+        <div class="why-num">06</div>
+        <div class="why-icon">📈</div>
+        <h3>Business Growth Support</h3>
+        <p>We provide marketing assets, product knowledge training, and market trend reports to help you sell more effectively in your local market.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     HOW TO ORDER / PROCESS
+     ============================================================ -->
+<section id="process" class="section section-alt">
+  <div class="container">
+    <div class="section-header text-center reveal" style="text-align:center">
+      <p class="label">Simple &amp; Transparent</p>
+      <h2 class="section-title">How to Start Ordering</h2>
+      <p class="section-subtitle" style="margin:20px auto 0">
+        Getting started as a Beauty in House reseller is straightforward.
+        Follow these five steps and you'll be selling K-Beauty in no time.
+      </p>
+    </div>
+
+    <div class="process-steps">
+
+      <div class="process-step reveal reveal-delay-1">
+        <div class="step-num">
+          📝 <span>1</span>
+        </div>
+        <div class="step-title">Submit Inquiry</div>
+        <div class="step-desc">Fill out our reseller inquiry form with your business details and target market.</div>
+      </div>
+
+      <div class="process-step reveal reveal-delay-2">
+        <div class="step-num">
+          💬 <span>2</span>
+        </div>
+        <div class="step-title">Consultation</div>
+        <div class="step-desc">Our export manager contacts you to understand your needs and qualifications.</div>
+      </div>
+
+      <div class="process-step reveal reveal-delay-3">
+        <div class="step-num">
+          📦 <span>3</span>
+        </div>
+        <div class="step-title">Receive Catalog</div>
+        <div class="step-desc">Get our full product catalog with wholesale pricing tiers and MOQ details.</div>
+      </div>
+
+      <div class="process-step reveal reveal-delay-4">
+        <div class="step-num">
+          🛒 <span>4</span>
+        </div>
+        <div class="step-title">Place Order</div>
+        <div class="step-desc">Confirm your order and complete payment via T/T bank transfer or trade finance.</div>
+      </div>
+
+      <div class="process-step reveal reveal-delay-5">
+        <div class="step-num">
+          ✈️ <span>5</span>
+        </div>
+        <div class="step-title">Ship &amp; Grow</div>
+        <div class="step-desc">Your order ships from Korea with full documentation. Track and sell with confidence.</div>
+      </div>
+
+    </div>
+
+    <!-- CTA bar -->
+    <div class="reveal" style="
+      margin-top: 72px;
+      background: linear-gradient(135deg, #1C1C1C 0%, #333 100%);
+      border-radius: 16px;
+      padding: 52px 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      flex-wrap: wrap;
+    ">
+      <div>
+        <p style="font-size:11px; letter-spacing:3px; text-transform:uppercase; color:#E8758A; font-weight:700; margin-bottom:10px">Ready to get started?</p>
+        <h3 style="font-size:1.9rem; font-weight:800; color:#fff; line-height:1.2">Join 500+ global resellers<br>already growing with us.</h3>
+      </div>
+      <div style="display:flex; gap:16px; flex-wrap:wrap">
+        <a href="#contact" class="btn btn-primary">
+          <i class="fas fa-paper-plane"></i> Send Inquiry
+        </a>
+        <a href="mailto:export@beautyinhouse.co.kr" class="btn btn-outline" style="border-color:rgba(255,255,255,0.3)">
+          <i class="fas fa-envelope"></i> Email Us
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     CONTACT / INQUIRY
+     ============================================================ -->
+<section id="contact" class="section">
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- Info side -->
+      <div class="contact-info reveal">
+        <p class="label">Get in Touch</p>
+        <h2 class="section-title">Let's Build Your<br>K-Beauty Business</h2>
+        <p class="section-subtitle" style="margin-top:20px">
+          Whether you're a new reseller or an established distributor looking to expand
+          your K-Beauty portfolio, we'd love to hear from you.
+        </p>
+
+        <div class="contact-items">
+          <div class="contact-item">
+            <div class="contact-item-icon">📍</div>
+            <div class="contact-item-text">
+              <strong>Address</strong>
+              <p>Gasan-dong 550-1, Geumcheon-gu, Seoul, Korea</p>
+              <small>Export Warehouse &amp; Showroom</small>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">📧</div>
+            <div class="contact-item-text">
+              <strong>Email</strong>
+              <p>info@beautyinhouse.co.kr</p>
+              <small>Reply within 24 business hours</small>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">📱</div>
+            <div class="contact-item-text">
+              <strong>Phone / KakaoTalk</strong>
+              <p>+82-10-8597-3757</p>
+              <small>Mon–Fri 10:00–18:00 KST</small>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">🌐</div>
+            <div class="contact-item-text">
+              <strong>Retail Store</strong>
+              <p>www.beautyinhouse.co.kr</p>
+              <small>Consumer retail reference</small>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:40px; padding:24px; background:var(--gold-pale); border-radius:12px; border-left:4px solid var(--gold)">
+          <p style="font-size:13px; font-weight:700; color:var(--gold); margin-bottom:6px; text-transform:uppercase; letter-spacing:1px">
+            Minimum Order Quantity
+          </p>
+          <p style="font-size:14px; color:var(--primary); line-height:1.7">
+            Starting from <strong>USD 2,000 per order</strong>. Tiered pricing available based on volume.
+            Contact us for custom quote and brand-specific MOQ details.
+          </p>
+        </div>
+      </div>
+
+      <!-- Form side -->
+      <div class="reveal" style="transition-delay:0.2s">
+        <form class="inquiry-form" id="inquiryForm" novalidate>
+          <h3 class="form-title">Wholesale Inquiry</h3>
+          <p class="form-sub">Fields marked * are required</p>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Company Name *</label>
+              <input type="text" name="company" placeholder="Your company name" required>
+            </div>
+            <div class="form-group">
+              <label>Contact Name *</label>
+              <input type="text" name="contact" placeholder="Your full name" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Email Address *</label>
+              <input type="email" name="email" placeholder="company@email.com" required>
+            </div>
+            <div class="form-group">
+              <label>Country / Region *</label>
+              <input type="text" name="country" placeholder="e.g. United States" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Brands of Interest</label>
+            <select name="brands">
+              <option value="">— Select primary brand interest —</option>
+              <option>COSRX</option>
+              <option>LANEIGE</option>
+              <option>MISSHA</option>
+              <option>ETUDE</option>
+              <option>THE FACE SHOP</option>
+              <option>MANYO FACTORY</option>
+              <option>HARU HARU WONDER</option>
+              <option>IM FROM</option>
+              <option>Multiple / All Brands</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Estimated Monthly Volume (USD)</label>
+            <select name="volume">
+              <option value="">— Select estimated volume —</option>
+              <option>Under $500</option>
+              <option>$500 – $2,000</option>
+              <option>$2,000 – $10,000</option>
+              <option>$10,000 – $50,000</option>
+              <option>Over $50,000</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Message / Inquiry</label>
+            <textarea name="message" placeholder="Tell us about your business, target market, and what products you're looking for..."></textarea>
+          </div>
+
+          <div class="form-check">
+            <input type="checkbox" id="agree" name="agree" required>
+            <label for="agree">
+              I agree to the collection and use of my business information for the purpose of this wholesale inquiry.
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center; padding:16px">
+            <i class="fas fa-paper-plane"></i> Submit Inquiry
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-grid">
+
+      <!-- Brand col -->
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <img src="https://www.beautyinhouse.co.kr/web/upload/category/editor/2020/02/18/9f4010ba7065a219219232e8225a371f.png"
+               alt="Beauty in House"
+               onerror="this.style.display='none'">
+          <div class="footer-logo-text">
+            <span>BEAUTY IN HOUSE</span>
+            <span>K-Beauty Distributor</span>
+          </div>
+        </div>
+        <p class="footer-desc">
+          Trusted K-Beauty wholesale distributor based in Seoul, Korea.
+          Connecting premium Korean beauty brands with resellers worldwide.
+        </p>
+        <div class="footer-cert">
+          <span class="cert-badge">AUTHORIZED</span>
+          <span class="cert-badge">OFFICIAL</span>
+          <span class="cert-badge">VERIFIED</span>
+        </div>
+        <div class="footer-socials" style="margin-top:24px">
+          <a href="#" class="footer-social"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="footer-social"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="footer-social"><i class="fab fa-whatsapp"></i></a>
+          <a href="#" class="footer-social"><i class="fas fa-blog"></i></a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#brands">Brand Portfolio</a></li>
+          <li><a href="#why">Why Choose Us</a></li>
+          <li><a href="#process">How to Order</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Brands -->
+      <div class="footer-col">
+        <h4>Our Brands</h4>
+        <ul>
+          <li><a href="#brands">COSRX</a></li>
+          <li><a href="#brands">LANEIGE</a></li>
+          <li><a href="#brands">MISSHA</a></li>
+          <li><a href="#brands">ETUDE</a></li>
+          <li><a href="#brands">THE FACE SHOP</a></li>
+          <li><a href="#brands">MANYO FACTORY</a></li>
+          <li><a href="#brands">HARU HARU WONDER</a></li>
+          <li><a href="#brands">IM FROM</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:info@beautyinhouse.co.kr">info@beautyinhouse.co.kr</a></li>
+          <li><a href="tel:+821085973757">+82-10-8597-3757</a></li>
+          <li><a href="https://www.beautyinhouse.co.kr" target="_blank">beautyinhouse.co.kr</a></li>
+          <li><a href="#">KakaoTalk</a></li>
+        </ul>
+        <div style="margin-top:28px; font-size:12px; color:rgba(255,255,255,0.3); line-height:1.8">
+          Business Hours<br>
+          <span style="color:rgba(255,255,255,0.5)">Mon–Fri  10:00–18:00 KST</span>
+        </div>
+      </div>
+
+    </div>
+
+    <hr class="footer-divider">
+
+    <div class="footer-bottom">
+      <div>
+        <p>© 2025 Beautyinhouse Co., Ltd. · Geumcheon-gu, Seoul, Korea · All rights reserved.</p>
+        <p style="margin-top:4px; font-size:11px">Business Reg. No. 493-87-01255 · CEO : Jung Ji Sang</p>
+      </div>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookie Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ============================================================
+     FLOATING CTA
+     ============================================================ -->
+<div class="float-cta">
+  <a href="#contact">
+    <i class="fas fa-paper-plane"></i>
+    <span>Get Wholesale Price</span>
+  </a>
+</div>
+
+
+<!-- Scripts -->
+<script src="js/main.js"></script>
+
+</body>
+</html>
