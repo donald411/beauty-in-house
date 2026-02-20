@@ -1272,7 +1272,7 @@ ul { list-style: none; }
   .about-image-wrap { display: none; }
   .contact-grid { grid-template-columns: 1fr; gap: 48px; }
   .form-row { grid-template-columns: 1fr; }
-  .hero-stats { gap: 32px; }
+  .hero-stats { gap: 32px; margin-top: 40px; }
   .footer-grid { grid-template-columns: 1fr; gap: 40px; }
   .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
   .partner-logos { gap: 28px; }
