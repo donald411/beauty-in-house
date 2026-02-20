@@ -682,6 +682,16 @@ ul { list-style: none; }
   max-width: 136px;
 }
 
+/* NUMBUZIN(10번) — SVG height 명시 + 텍스트 중앙 정렬 */
+.brands-grid .brand-card:nth-child(10) {
+  text-align: center;
+}
+.brands-grid .brand-card:nth-child(10) .brand-logo-wrap img {
+  height: 24px;
+  width: auto;
+  max-width: 100%;
+}
+
 .brand-category {
   font-size: 13px;
   color: var(--gray-3);
@@ -1300,6 +1310,11 @@ ul { list-style: none; }
   .float-cta a span { display: none; }
   .partner-logos { gap: 16px; }
   .partner-logos img { height: 22px; }
+  /* SKIN1004(9번) 모바일 — 80% 크기 */
+  .brands-grid .brand-card:nth-child(9) .brand-logo-wrap img {
+    max-height: 48px;
+    max-width: 128px;
+  }
   .process-cta { padding: 32px 24px; margin-top: 48px; }
   .process-cta h3 { font-size: 1.4rem !important; }
 }
