@@ -668,6 +668,20 @@ ul { list-style: none; }
 }
 .brand-card:hover .brand-name { color: var(--primary); }
 
+/* COSRX(1번), THE FACE SHOP(5번) — 70% 크기 */
+.brands-grid .brand-card:nth-child(1) .brand-logo-wrap img,
+.brands-grid .brand-card:nth-child(5) .brand-logo-wrap img {
+  max-height: 42px;
+  max-width: 112px;
+}
+
+/* MISSHA(3번), ETUDE(4번) — 85% 크기 */
+.brands-grid .brand-card:nth-child(3) .brand-logo-wrap img,
+.brands-grid .brand-card:nth-child(4) .brand-logo-wrap img {
+  max-height: 51px;
+  max-width: 136px;
+}
+
 .brand-category {
   font-size: 13px;
   color: var(--gray-3);
@@ -1253,6 +1267,7 @@ ul { list-style: none; }
   .hero-content { padding: 0 28px; }
   .nav-links, .nav-cta { display: none; }
   .menu-toggle { display: flex; }
+  #hero { align-items: flex-start; padding-top: 110px; }
   #about .about-grid { grid-template-columns: 1fr; gap: 48px; }
   .about-image-wrap { display: none; }
   .contact-grid { grid-template-columns: 1fr; gap: 48px; }
