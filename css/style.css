@@ -1294,6 +1294,7 @@ ul { list-style: none; }
   .container { padding: 0 20px; }
   .hero-content { padding: 0 20px; }
   .brands-grid { grid-template-columns: repeat(2, 1fr); }
+  .brand-card { padding: 32px 20px; text-align: center; }
   .why-grid    { grid-template-columns: 1fr; }
   #process .process-steps { grid-template-columns: repeat(2, 1fr); }
   .process-step:last-child:nth-child(odd) {
