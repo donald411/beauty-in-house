@@ -312,9 +312,9 @@ ul { list-style: none; }
   position: absolute;
   inset: 0;
   background-image:
-    url('../images/background.avif');
+    url('../images/Makeup1.gif');
   background-size: cover;
-  background-position: center 30%;
+  background-position: right center;
   opacity: 0.70;
   transform: scale(1.05);
   animation: heroZoom 12s ease-out forwards;
