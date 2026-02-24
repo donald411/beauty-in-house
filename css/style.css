@@ -316,6 +316,7 @@ ul { list-style: none; }
   background-size: 70%;
   background-position: right center;
   background-repeat: no-repeat;
+  background-color: #ffffff;
   opacity: 0.70;
   transform: scale(1.05);
   animation: heroZoom 12s ease-out forwards;
