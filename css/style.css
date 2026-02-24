@@ -315,6 +315,7 @@ ul { list-style: none; }
     url('../images/Makeup1.gif');
   background-size: 70%;
   background-position: right center;
+  background-repeat: no-repeat;
   opacity: 0.70;
   transform: scale(1.05);
   animation: heroZoom 12s ease-out forwards;
@@ -1275,6 +1276,7 @@ ul { list-style: none; }
   .container { padding: 0 28px; }
   .nav-inner { padding: 0 28px; height: 80px; }
   .nav-logo img { height: 52px; }
+  .hero-bg { background-size: 140%; }
   .hero-content { padding: 0 28px; }
   .nav-links, .nav-cta { display: none; }
   .menu-toggle { display: flex; }
