@@ -1277,7 +1277,7 @@ ul { list-style: none; }
   .container { padding: 0 28px; }
   .nav-inner { padding: 0 28px; height: 80px; }
   .nav-logo img { height: 52px; }
-  .hero-bg { background-size: 140%; background-position: 75% center; }
+  .hero-bg { background-size: 140%; background-position: 50% center; }
   .hero-content { padding: 0 28px; }
   .nav-links, .nav-cta { display: none; }
   .menu-toggle { display: flex; }
