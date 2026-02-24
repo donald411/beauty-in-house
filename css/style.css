@@ -313,7 +313,7 @@ ul { list-style: none; }
   inset: 0;
   background-image:
     url('../images/Makeup1.gif');
-  background-size: cover;
+  background-size: 70%;
   background-position: right center;
   opacity: 0.70;
   transform: scale(1.05);
