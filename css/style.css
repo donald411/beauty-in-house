@@ -694,6 +694,26 @@ ul { list-style: none; }
   max-width: 100%;
 }
 
+/* K-SECRET(12번), BEAUTY OF JOSEON(14번), INNISFREE(18번) — 70% 크기 */
+.brands-grid .brand-card:nth-child(12) .brand-logo-wrap img,
+.brands-grid .brand-card:nth-child(14) .brand-logo-wrap img,
+.brands-grid .brand-card:nth-child(18) .brand-logo-wrap img {
+  max-height: 42px;
+  max-width: 112px;
+}
+
+/* MIXSOON(15번) — 80% 크기 */
+.brands-grid .brand-card:nth-child(15) .brand-logo-wrap img {
+  max-height: 48px;
+  max-width: 128px;
+}
+
+/* VT COSMETICS(19번) — 60% 크기 */
+.brands-grid .brand-card:nth-child(19) .brand-logo-wrap img {
+  max-height: 36px;
+  max-width: 96px;
+}
+
 .brand-category {
   font-size: 13px;
   color: var(--gray-3);
