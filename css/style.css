@@ -192,10 +192,6 @@ ul { list-style: none; }
   line-height: 1.1;
 }
 
-/* Show text if image fails to load */
-.nav-logo.no-image img { display: none; }
-.nav-logo.no-image .nav-logo-text { display: flex; }
-
 .nav-logo-text span:first-child {
   font-size: 18px;
   font-weight: 800;
