@@ -175,19 +175,11 @@ ul { list-style: none; }
 }
 
 .nav-logo img {
-  height: 104px;
-  width: auto;
-  object-fit: contain;
-  filter: brightness(0) invert(1);
-  transition: filter var(--transition);
-}
-
-#header.scrolled .nav-logo img {
-  filter: none;
+  display: none;
 }
 
 .nav-logo-text {
-  display: none;
+  display: flex !important;
   flex-direction: column;
   line-height: 1.1;
 }
