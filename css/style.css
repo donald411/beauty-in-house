@@ -1316,6 +1316,8 @@ ul { list-style: none; }
 @media (max-width: 640px) {
   .section { padding: 72px 0; }
   .container { padding: 0 20px; }
+  .nav-inner { height: 70px; }
+  .nav-logo img { height: 40px; }
   .hero-content { padding: 0 20px; }
   .brands-grid { grid-template-columns: repeat(2, 1fr); }
   .brand-card { padding: 32px 20px; text-align: center; }
