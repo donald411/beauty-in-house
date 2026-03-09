@@ -117,28 +117,83 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
-  /* ---------- Form handling ---------- */
-  const form = document.getElementById('inquiryForm');
-  if (form) {
-    form.addEventListener('submit', async e => {
+  /* ---------- Form handling → Google Sheet ---------- */
+  const contactForm = document.getElementById('contact-form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
       e.preventDefault();
-      const btn = form.querySelector('button[type="submit"]');
-      const orig = btn.innerHTML;
-      btn.innerHTML = '<span class="spinner"></span> Sending...';
-      btn.disabled = true;
 
-      // Simulate send (replace with real API call)
-      await new Promise(r => setTimeout(r, 1800));
+      // Basic validation
+      const company = document.getElementById('company');
+      const name = document.getElementById('name');
+      const email = document.getElementById('email');
+      const country = document.getElementById('country');
+      const message = document.getElementById('message');
+      const agree = document.getElementById('agree');
 
-      btn.innerHTML = '✓ Inquiry Sent!';
-      btn.style.background = '#4CAF50';
+      if (!company.value.trim() || !name.value.trim() || !email.value.trim() || !country.value.trim() || !message.value.trim()) {
+        showToast('Please fill in all required fields.');
+        return;
+      }
+      if (!agree.checked) {
+        showToast('Please agree to the privacy terms.');
+        return;
+      }
 
-      setTimeout(() => {
-        btn.innerHTML = orig;
-        btn.style.background = '';
-        btn.disabled = false;
-        form.reset();
-      }, 4000);
+      var submitBtn = contactForm.querySelector('.form-submit');
+      var successMsg = document.getElementById('form-success');
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending…';
+
+      var formData = {
+        site: 'B',
+        company: company.value.trim(),
+        country: country.value.trim(),
+        name: name.value.trim(),
+        email: email.value.trim(),
+        'business-type': document.getElementById('business-type').value,
+        'brands-interest': document.getElementById('brands-interest').value.trim(),
+        message: message.value.trim(),
+      };
+
+      var iframe = document.getElementById('hidden-iframe');
+      if (!iframe) {
+        iframe = document.createElement('iframe');
+        iframe.id = 'hidden-iframe';
+        iframe.name = 'hidden-iframe';
+        iframe.style.display = 'none';
+        document.body.appendChild(iframe);
+      }
+
+      var hiddenForm = document.createElement('form');
+      hiddenForm.method = 'POST';
+      hiddenForm.action = 'https://script.google.com/macros/s/AKfycbzdR5O2WpQ0VVyvqreBsuJCjqEjtoR0DacwuH2FryifvN9WGVZzvbPNFjFG71be3FuG/exec';
+      hiddenForm.target = 'hidden-iframe';
+      hiddenForm.style.display = 'none';
+
+      Object.keys(formData).forEach(function(key) {
+        var input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = key;
+        input.value = formData[key];
+        hiddenForm.appendChild(input);
+      });
+
+      document.body.appendChild(hiddenForm);
+      hiddenForm.submit();
+      document.body.removeChild(hiddenForm);
+
+      contactForm.reset();
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Inquiry';
+      if (successMsg) {
+        successMsg.style.display = 'block';
+        successMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+      setTimeout(function() {
+        if (successMsg) successMsg.style.display = 'none';
+      }, 8000);
 
       showToast('Your inquiry has been sent. We will reply within 24 hours.');
     });

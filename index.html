@@ -810,74 +810,54 @@
 
       <!-- Form side -->
       <div class="reveal" style="transition-delay:0.2s">
-        <form class="inquiry-form" id="inquiryForm" novalidate>
+        <form class="inquiry-form" id="contact-form" novalidate>
           <h3 class="form-title">Wholesale Inquiry</h3>
           <p class="form-sub">Fields marked * are required</p>
 
           <div class="form-row">
             <div class="form-group">
               <label>Company Name *</label>
-              <input type="text" name="company" placeholder="Your company name" required>
+              <input type="text" id="company" name="company" placeholder="Your company name" required>
             </div>
             <div class="form-group">
               <label>Contact Name *</label>
-              <input type="text" name="contact" placeholder="Your full name" required>
+              <input type="text" id="name" name="name" placeholder="Your full name" required>
             </div>
           </div>
 
           <div class="form-row">
             <div class="form-group">
               <label>Email Address *</label>
-              <input type="email" name="email" placeholder="company@email.com" required>
+              <input type="email" id="email" name="email" placeholder="company@email.com" required>
             </div>
             <div class="form-group">
               <label>Country / Region *</label>
-              <input type="text" name="country" placeholder="e.g. United States" required>
+              <input type="text" id="country" name="country" placeholder="e.g. United States" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Business Type</label>
+              <select id="business-type" name="business-type">
+                <option value="">— Select business type —</option>
+                <option>Online Retailer</option>
+                <option>Offline Retailer</option>
+                <option>Distributor</option>
+                <option>Wholesaler</option>
+                <option>Salon / Spa</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Brands of Interest</label>
+              <input type="text" id="brands-interest" name="brands-interest" placeholder="e.g. COSRX, LANEIGE, MISSHA">
             </div>
           </div>
 
           <div class="form-group">
-            <label>Brands of Interest</label>
-            <select name="brands">
-              <option value="">— Select primary brand interest —</option>
-              <option>COSRX</option>
-              <option>LANEIGE</option>
-              <option>MISSHA</option>
-              <option>ETUDE</option>
-              <option>THE FACE SHOP</option>
-              <option>MANYO FACTORY</option>
-              <option>HARU HARU WONDER</option>
-              <option>IM FROM</option>
-              <option>SKIN1004</option>
-              <option>NUMBUZIN</option>
-              <option>DR.G</option>
-              <option>K-SECRET</option>
-              <option>ELIZAVECCA</option>
-              <option>BEAUTY OF JOSEON</option>
-              <option>MIXSOON</option>
-              <option>TIAM</option>
-              <option>ABIB</option>
-              <option>INNISFREE</option>
-              <option>VT COSMETICS</option>
-              <option>Multiple / All Brands</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label>Estimated Monthly Volume (USD)</label>
-            <select name="volume">
-              <option value="">— Select estimated volume —</option>
-              <option>Under $500</option>
-              <option>$500 – $2,000</option>
-              <option>$2,000 – $10,000</option>
-              <option>$10,000 – $50,000</option>
-              <option>Over $50,000</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label>Message / Inquiry</label>
-            <textarea name="message" placeholder="Tell us about your business, target market, and what products you're looking for..."></textarea>
+            <label>Message / Inquiry *</label>
+            <textarea id="message" name="message" placeholder="Tell us about your business, target market, and what products you're looking for..." required></textarea>
           </div>
 
           <div class="form-check">
@@ -887,9 +867,13 @@
             </label>
           </div>
 
-          <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center; padding:16px">
-            <i class="fas fa-paper-plane"></i> Submit Inquiry
+          <button type="submit" class="btn btn-primary form-submit" style="width:100%; justify-content:center; padding:16px">
+            <i class="fas fa-paper-plane"></i> Send Inquiry
           </button>
+
+          <div id="form-success" style="display:none; margin-top:16px; padding:16px; background:#e8f5e9; color:#2e7d32; border-radius:8px; text-align:center; font-weight:600; transition: opacity 0.3s;">
+            ✓ Your inquiry has been sent successfully. We will reply within 24 hours.
+          </div>
         </form>
       </div>
     </div>
