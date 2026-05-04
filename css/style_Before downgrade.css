@@ -304,7 +304,15 @@ ul { list-style: none; }
 .hero-bg {
   position: absolute;
   inset: 0;
-  background-color: var(--primary);
+  background-image:
+    url('../images/Makeup1.gif');
+  background-size: 70%;
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-color: #ffffff;
+  opacity: 0.70;
+  transform: scale(1.05);
+  animation: heroZoom 12s ease-out forwards;
 }
 
 .hero-overlay {
@@ -1282,6 +1290,7 @@ ul { list-style: none; }
   .container { padding: 0 28px; }
   .nav-inner { padding: 0 28px; height: 80px; }
   .nav-logo img { height: 52px; }
+  .hero-bg { background-size: 140%; background-position: 50% center; }
   .hero-content { padding: 0 28px; }
   .nav-links, .nav-cta { display: none; }
   .menu-toggle { display: flex; }
